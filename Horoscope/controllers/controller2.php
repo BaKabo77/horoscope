@@ -3,10 +3,14 @@ switch($action)
 {
     case 'reponse':
         {
-            echo 'Partie a coder';
+            var_dump($_REQUEST);
+            $key = $_REQUEST['horoscope'];
+            echo $signe[$key];
             break;
         }
     
     default:
-    {include"../views/choix.php";}
+    {
+        include 'views/choix.php';
+    }
 }
